@@ -65,7 +65,32 @@ Current recommendation shortlist:
 3. **Go:** simple deployment, good performance, straightforward secure services.
 4. **Python (FastAPI/Django):** great productivity, but needs stricter discipline for long-term hardening.
 
-## Phase 2: Technical Decisions (Guided Discussions)
+## Phase 2: First Implementation Slice (Login + Admin)
+After Phase 1 is approved, the first coding slice will be authentication and an administrative visibility panel.
+
+### 2.1 Login Logic (MVP)
+- Sign up with email + password
+- Sign in with secure session/token strategy
+- Password reset flow
+- Basic account lock/rate-limit protections
+- Optional MFA-ready design (enabled later)
+
+### 2.2 Admin Visibility (MVP)
+Administrative dashboard should allow safe access to these user/account fields:
+- User ID
+- Last known IP (with privacy/legal policy)
+- Nickname
+- Email
+- Total time inside the application (session duration)
+- Account creation date
+
+### 2.3 Security Notes for Admin Data
+- Restrict admin area by role-based authorization.
+- Log all admin reads/exports.
+- Mask sensitive data where possible.
+- Keep data retention rules explicit.
+
+## Phase 3: Technical Decisions (Guided Discussions)
 Before coding each block, discuss options in a teacher-style format:
 - Option A vs Option B
 - Pros and cons
@@ -80,15 +105,25 @@ Example topics:
 - Hosting and deployment model
 - CI/CD and security checks
 
-## Phase 3: Implementation Plan (After Approval)
-Only starts when Phase 1 + 2 are documented and approved.
+## Phase 4: Implementation Plan (After Approval)
+Only starts when Phase 1 + 2 + 3 are documented and approved.
 
 1. Repository structure
 2. Secure scaffolding
 3. Authentication and authorization
-4. MVP features
-5. Observability and hardening
-6. Local test launch
+4. Admin dashboard (minimum fields)
+5. MVP features
+6. Observability and hardening
+7. Local test launch
+
+## English Coaching Mode (Always On)
+To support English learning in every session:
+- All technical artifacts stay in English.
+- Explanations can be bilingual (PT-BR + EN) when needed.
+- At the end of each session, include:
+  - 3 useful English technical phrases
+  - 2 corrections for common mistakes
+  - 1 short practice sentence to repeat/use
 
 ## Working Method (ADHD-Friendly)
 - One objective per session
@@ -99,11 +134,11 @@ Only starts when Phase 1 + 2 are documented and approved.
 
 ## Next Conversation Checklist
 In the next step, we can decide these five items together:
-1. Exact MVP audience
-2. Minimal data we will store
-3. Authentication baseline
-4. Threat model draft (first version)
-5. Language decision criteria (security + learning curve)
+1. Login method (session cookie vs JWT)
+2. Minimal admin fields and who can see them
+3. Threat model draft focused on auth flows
+4. Data retention policy for IP/session logs
+5. Final language decision criteria (security + learning curve)
 
 ---
-If you want, the next iteration can be a one-page **Project Charter** and a **Security Requirements v1** document, both fully in English.
+If you want, the next iteration can be a one-page **Auth & Admin Security Requirements v1** document, fully in English.
