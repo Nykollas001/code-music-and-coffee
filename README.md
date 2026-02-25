@@ -125,6 +125,26 @@ To support English learning in every session:
   - 2 corrections for common mistakes
   - 1 short practice sentence to repeat/use
 
+### English Starter Plan (From Gamer English to Tech English)
+If your English today is mostly from games/videos, use this progression:
+1. **Week 1:** focus on login/auth words only.
+2. **Week 2:** add admin/dashboard words.
+3. **Week 3:** write short status updates in English (2-3 lines).
+4. **Week 4:** explain one technical decision fully in English.
+
+Daily micro-routine (15 minutes):
+- 5 min: read one short section of this README out loud.
+- 5 min: write 3 sentences about what you will build today.
+- 5 min: review 5 auth/admin terms and create one sentence with each.
+
+Starter glossary for this project:
+- **Sign up** = create account
+- **Sign in** = log in
+- **Role** = access level (admin/user)
+- **Permission** = what a role can do
+- **Session** = logged-in period
+- **Audit log** = history of sensitive actions
+
 ## Working Method (ADHD-Friendly)
 - One objective per session
 - Checklists with very small tasks
